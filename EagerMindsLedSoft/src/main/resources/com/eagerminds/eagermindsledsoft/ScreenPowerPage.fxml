@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.eagerminds.eagermindsledsoft.pages.ScreenPowerPageController">
+  
+    <HBox alignment="BOTTOM_LEFT">
+        <VBox.margin>
+            <Insets left="15" top="15"/>
+        </VBox.margin>
+        <Label text="%power_switch" />
+        <ComboBox prefWidth="100.0" fx:id="cb_power_switch">
+            <!--<items>-->
+            <!--<FXCollections fx:factory="observableArrayList">-->
+            <!--<String fx:value="%power"/>-->
+            <!--<String fx:value="%repeat_everyday_by_week"/>-->
+            <!--</FXCollections>-->
+            <!--</items>-->
+        </ComboBox>
+        <Button onAction="#onActionSetPowerState" prefHeight="30.0"
+            prefWidth="150.0" text="%set_power_state">
+            <HBox.margin>
+                <Insets left="15" />
+            </HBox.margin>
+        </Button>
+
+        <Button onAction="#onActionGetPowerState" prefHeight="30.0"
+            prefWidth="150.0" text="%get_power_state">
+            <HBox.margin>
+                <Insets left="15" />
+            </HBox.margin>
+        </Button>
+
+    </HBox>
+
+    <HBox>
+        <VBox.margin>
+            <Insets left="15" top="15" />
+        </VBox.margin>
+        <Label text="%power_switch_mode" />
+        <ComboBox prefWidth="100.0" fx:id="cb_power_switch_mode" />
+
+        <Button onAction="#onActionSetPowerMode" prefHeight="30.0"
+            prefWidth="150.0" text="%set_power_switch_mode">
+            <HBox.margin>
+                <Insets left="15" />
+            </HBox.margin>
+        </Button>
+
+        <Button onAction="#onActionGetPowerMode"
+            prefHeight="30.0"
+            prefWidth="150.0" text="%get_power_switch_mode">
+            <HBox.margin>
+                <Insets left="15" />
+            </HBox.margin>
+        </Button>
+    </HBox>
+
+    <HBox fx:id="hbox_screenpower_repeat">
+        <VBox.margin>
+            <Insets left="15" top="10"/>
+        </VBox.margin>
+        <Label text="%set_brightness_repeat_style">
+        </Label>
+        <ComboBox prefWidth="140.0" fx:id="cb_adjust_repeat_type">
+        </ComboBox>
+    </HBox>
+
+
+
+
+    <HBox fx:id="hbox_policy_time" spacing="5" alignment="CENTER_LEFT">
+        <VBox.margin>
+            <Insets left="15" top="10"/>
+        </VBox.margin>
+        <Label text="%repeat_time">
+        </Label>
+
+        <TextField fx:id="tf_policy_hour" prefWidth="40" text="00"/>
+        <Label text="h">
+        </Label>
+
+        <TextField fx:id="tf_policy_minute" prefWidth="40" text="00"/>
+        <Label text="m">
+        </Label>
+
+        <TextField fx:id="tf_policy_second" prefWidth="40" text="00"/>
+        <Label text="s">
+        </Label>
+    </HBox>
+
+
+
+
+    <HBox fx:id="hbox_screenpower_selectday" spacing="5">
+        <VBox.margin>
+            <Insets left="15" top="10"/>
+        </VBox.margin>
+        <CheckBox text="%repeat_monday" fx:id="cb_monday"/>
+        <CheckBox text="%repeat_tuesday" fx:id="cb_tuesday"/>
+        <CheckBox text="%repeat_wednesday" fx:id="cb_wednesday"/>
+        <CheckBox text="%repeat_thursday" fx:id="cb_thursday"/>
+        <CheckBox text="%repeat_friday" fx:id="cb_friday"/>
+        <CheckBox text="%repeat_saturday" fx:id="cb_saturday"/>
+        <CheckBox text="%repeat_sunday" fx:id="cb_sunday"/>
+    </HBox>
+
+
+    <HBox fx:id="hbox_screenpower_policy">
+        <VBox.margin>
+            <Insets left="15" top="15" />
+        </VBox.margin>
+        <Button onAction="#onActionAddPolicy" prefHeight="30.0"
+            prefWidth="150.0" text="%add_policy">
+        </Button>
+
+        <Button onAction="#onActionSetPowerPolicy" prefHeight="30.0"
+            prefWidth="150.0" text="%set_power_policy">
+            <HBox.margin>
+                <Insets left="15" />
+            </HBox.margin>
+        </Button>
+
+        <Button onAction="#onActionGetPowerPolicy"
+            prefHeight="30.0"
+            prefWidth="150.0" text="%get_power_policy">
+            <HBox.margin>
+                <Insets left="15" />
+            </HBox.margin>
+        </Button>
+    </HBox>
+
+
+    <TextArea fx:id="ta_show" prefHeight="150.0" prefWidth="400.0">
+        <VBox.margin>
+            <Insets top="15" />
+        </VBox.margin>
+    </TextArea>
+
+</VBox>
+

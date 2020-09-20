@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml" fx:controller="com.eagerminds.eagermindsledsoft.pages.BrightnessAdjustPageController">
+    
+     <HBox>
+        <VBox.margin>
+            <Insets left="90" top="30"/>
+        </VBox.margin>
+    </HBox>
+
+    <!-- Brightness adjustment value -->
+    <HBox fx:id="hbox_brightness_manual">
+        <VBox.margin>
+            <Insets left="25"/>
+        </VBox.margin>
+        <Label text="%setting_brightness">
+            <HBox.margin>
+                <Insets top="3" right="5"/>
+            </HBox.margin>
+            <font>
+                <Font size="18"/>
+            </font>
+        </Label>
+
+        <TextField fx:id="tf_brightness_value" prefWidth="40" text="00"/>
+        <Label text="\%">
+            <font>
+                <Font size="18"/>
+            </font>
+        </Label>
+    </HBox>
+
+    <HBox fx:id="hbox_brightness_operation">
+        <VBox.margin>
+            <Insets left="25" top="10"/>
+        </VBox.margin>
+        <Label text="%set_brightness_effective_time">
+            <HBox.margin>
+                <Insets top="3" right="5"/>
+            </HBox.margin>
+            <font>
+                <Font size="18"/>
+            </font>
+        </Label>
+
+        <TextField fx:id="tf_operation_hour" prefWidth="40" text="00"/>
+        <Label text="h">
+            <HBox.margin>
+                <Insets top="2" right="5"/>
+            </HBox.margin>
+            <font>
+                <Font size="18"/>
+            </font>
+        </Label>
+
+        <TextField fx:id="tf_operation_minute" prefWidth="40" text="00"/>
+        <Label text="m">
+            <HBox.margin>
+                <Insets top="1" right="5"/>
+            </HBox.margin>
+            <font>
+                <Font size="18"/>
+            </font>
+        </Label>
+
+        <TextField fx:id="tf_operation_second" prefWidth="40" text="00"/>
+        <Label text="s">
+            <HBox.margin>
+                <Insets top="1" right="5"/>
+            </HBox.margin>
+            <font>
+                <Font size="18"/>
+            </font>
+        </Label>
+    </HBox>
+
+    <HBox fx:id="hbox_brightness_repeat">
+        <VBox.margin>
+            <Insets left="25" top="10"/>
+        </VBox.margin>
+        <Label text="%set_brightness_repeat_style">
+            <font>
+                <Font size="18"/>
+            </font>
+        </Label>
+        <ComboBox prefWidth="140.0" fx:id="cb_adjust_repeat_type">
+        </ComboBox>
+    </HBox>
+    <HBox>
+        <VBox.margin>
+            <Insets left="25" top="10"/>
+        </VBox.margin>
+        <Label text="%set_brightness_adjust_style">
+            <font>
+                <Font size="18"/>
+            </font>
+        </Label>
+        <ComboBox prefWidth="140.0" fx:id="cb_adjust_type">
+        </ComboBox>
+    </HBox>
+    <HBox fx:id="hbox_brightness_selectday" spacing="5">
+        <VBox.margin>
+            <Insets left="20" top="10"/>
+        </VBox.margin>
+        <CheckBox text="%repeat_monday" fx:id="cb_monday"/>
+        <CheckBox text="%repeat_tuesday" fx:id="cb_tuesday"/>
+        <CheckBox text="%repeat_wednesday" fx:id="cb_wednesday"/>
+        <CheckBox text="%repeat_thursday" fx:id="cb_thursday"/>
+        <CheckBox text="%repeat_friday" fx:id="cb_friday"/>
+        <CheckBox text="%repeat_saturday" fx:id="cb_saturday"/>
+        <CheckBox text="%repeat_sunday" fx:id="cb_sunday"/>
+    </HBox>
+    <HBox>
+
+        <VBox.margin>
+            <Insets left="25" top="10"/>
+        </VBox.margin>
+        <Button fx:id="btn_add_policy" text="%setting_brightness_policy_add" onAction="#onAddPolicy">
+            <padding>
+                <Insets left="20" top="10" right="20" bottom="10"/>
+            </padding>
+            <VBox.margin>
+                <Insets left="170" top="20"/>
+            </VBox.margin>
+        </Button>
+
+        <Button fx:id="btn_confirm" text="%setting_brightness_policy_operation" onAction="#onAdjustBrightness">
+            <padding>
+                <Insets left="20" top="10" right="20" bottom="10"/>
+            </padding>
+            <HBox.margin>
+                <Insets left="20"/>
+            </HBox.margin>
+            <VBox.margin>
+                <Insets left="170" top="20"/>
+            </VBox.margin>
+        </Button>
+
+        <Button fx:id="btn_getBrightness" text="%get_brightness" onAction="#getBrightness">
+            <padding>
+                <Insets left="20" top="10" right="20" bottom="10"/>
+            </padding>
+            <HBox.margin>
+                <Insets left="20"/>
+            </HBox.margin>
+            <VBox.margin>
+                <Insets left="170" top="20"/>
+            </VBox.margin>
+        </Button>
+
+        <Button text="%get_brightness_policy" onAction="#getBrightnessPolicy">
+            <padding>
+                <Insets left="20" top="10" right="20" bottom="10"/>
+            </padding>
+            <HBox.margin>
+                <Insets left="20"/>
+            </HBox.margin>
+            <VBox.margin>
+                <Insets left="170" top="20"/>
+            </VBox.margin>
+        </Button>
+    </HBox>
+    <TextArea fx:id="ta_info" prefHeight="250.0" prefWidth="200.0">
+        <VBox.margin>
+            <Insets top="15"/>
+        </VBox.margin>
+    </TextArea>
+    
+</VBox>

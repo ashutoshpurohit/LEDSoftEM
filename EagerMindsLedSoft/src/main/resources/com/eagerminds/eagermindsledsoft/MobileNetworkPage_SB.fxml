@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<Pane id="MobileNetworkPage_SB" fx:id="MobileNetworkPage_SB" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="625.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eagerminds.eagermindsledsoft.pages.network.MobileNetworkPage_SBController">
+    
+<children>
+      <GridPane layoutX="1.0" layoutY="-3.0" prefHeight="420.0" prefWidth="950.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="470.0" minWidth="10.0" prefWidth="307.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="643.0" minWidth="10.0" prefWidth="643.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Pane prefHeight="420.0" prefWidth="332.0">
+               <children>
+                  <Label id="lbIsOpenMobileNet" fx:id="lbIsOpenMobileNet" layoutX="21.0" layoutY="14.0" text="%lbIsOpenMobileNet" />
+                  <Label id="lbIsOpenRoaming" fx:id="lbIsOpenRoaming" layoutX="21.0" layoutY="55.0" text="%lbIsOpenRoaming" />
+                  <Label id="lbIsEnableMobileNet" fx:id="lbIsEnableMobileNet" layoutX="21.0" layoutY="109.0" text="%lbIsEnableMobileNet" />
+                  <Label id="lbMobileNetProviderName" fx:id="lbMobileNetProviderName" layoutX="21.0" layoutY="156.0" text="%lbMobileNetProviderName" />
+                  <ComboBox id="cbIsOpenMobileNet" fx:id="cbIsOpenMobileNet" layoutX="179.0" layoutY="11.0" prefHeight="23.0" prefWidth="114.0" />
+                  <ComboBox id="cbIsOpenRoaming" fx:id="cbIsOpenRoaming" layoutX="179.0" layoutY="52.0" prefHeight="23.0" prefWidth="114.0" />
+                  <ComboBox id="cbIsEnableMobileNet" fx:id="cbIsEnableMobileNet" layoutX="179.0" layoutY="106.0" prefHeight="23.0" prefWidth="114.0" />
+                  <TextField id="tfMobileNetProviderName" fx:id="tfMobileNetProviderName" layoutX="179.0" layoutY="152.0" prefHeight="23.0" prefWidth="114.0" />
+                  <Button id="btnCheckMobileModuleExist" fx:id="btnCheckMobileModuleExist" layoutX="115.0" layoutY="289.0" mnemonicParsing="false" onAction="#onCheckMobileModuleExist" prefHeight="23.0" prefWidth="181.0" text="%btnCheckMobileModuleExist" />
+                  <Button id="btnGetMobileNetConfig" fx:id="btnGetMobileNetConfig" layoutX="115.0" layoutY="337.0" mnemonicParsing="false" onAction="#onGetMobileNetConfig" prefHeight="23.0" prefWidth="181.0" text="%btnGetMobileNetConfig" />
+                  <Button id="btnSetMobileNetConfig" fx:id="btnSetMobileNetConfig" layoutX="115.0" layoutY="383.0" mnemonicParsing="false" onAction="#onSetMobileNetConfig" prefHeight="23.0" prefWidth="181.0" text="%btnSetMobileNetConfig" />
+               </children>
+            </Pane>
+            <Pane prefHeight="464.0" prefWidth="521.0" GridPane.columnIndex="1">
+               <children>
+                  <Label id="lbCarrier" fx:id="lbCarrier" layoutX="4.0" layoutY="14.0" text="%lbCarrier" textFill="RED" />
+                  <Label id="lbmcc" fx:id="lbmcc" layoutX="4.0" layoutY="49.0" text="%lbmcc" textFill="RED" />
+                  <Label id="lbmnc" fx:id="lbmnc" layoutX="2.0" layoutY="87.0" text="%lbmnc" textFill="RED" />
+                  <Label id="lbapn" fx:id="lbapn" layoutX="2.0" layoutY="128.0" text="%lbapn" textFill="RED" />
+                  <Label id="lbuser" fx:id="lbuser" layoutX="2.0" layoutY="166.0" text="%lbuser" />
+                  <Label id="lbpassword" fx:id="lbpassword" layoutX="2.0" layoutY="208.0" text="%lbpassword" />
+                  <Label id="lbserver" fx:id="lbserver" layoutX="2.0" layoutY="251.0" text="%lbserver" />
+                  <Label id="lbproxy" fx:id="lbproxy" layoutX="2.0" layoutY="294.0" text="%lbproxy" />
+                  <Label id="lbport" fx:id="lbport" layoutX="2.0" layoutY="337.0" text="%lbport" />
+                  <Label id="lbmmsc" fx:id="lbmmsc" layoutX="310.0" layoutY="12.0" text="%lbmmsc" />
+                  <Label id="lbmmsproxy" fx:id="lbmmsproxy" layoutX="310.0" layoutY="47.0" text="%lbmmsproxy" />
+                  <Label id="lbmmsport" fx:id="lbmmsport" layoutX="308.0" layoutY="85.0" text="%lbmmsport" />
+                  <Label id="lbtype" fx:id="lbtype" layoutX="308.0" layoutY="126.0" text="%lbtype" />
+                  <Label id="lbprotocol" fx:id="lbprotocol" layoutX="308.0" layoutY="164.0" text="%lbprotocol" />
+                  <Label id="lbauthtype" fx:id="lbauthtype" layoutX="308.0" layoutY="206.0" text="%lbauthtype" />
+                  <Label id="lbroamingprotocol" fx:id="lbroamingprotocol" layoutX="308.0" layoutY="249.0" text="%lbroamingprotocol" />
+                  <Label id="lbisUserDefined" fx:id="lbisUserDefined" layoutX="308.0" layoutY="292.0" text="%lbisUserDefined" />
+                  <Label id="lbIsUsed" fx:id="lbIsUsed" layoutX="308.0" layoutY="335.0" text="%lbIsUsed" />
+                  <TextField id="tfCrarier" fx:id="tfCrarier" layoutX="119.0" layoutY="8.0" prefHeight="23.0" prefWidth="171.0" />
+                  <TextField id="tfmcc" fx:id="tfmcc" layoutX="119.0" layoutY="45.0" prefHeight="23.0" prefWidth="171.0" />
+                  <TextField id="tfmnc" fx:id="tfmnc" layoutX="119.0" layoutY="83.0" prefHeight="23.0" prefWidth="171.0" />
+                  <TextField id="tfapn" fx:id="tfapn" layoutX="119.0" layoutY="124.0" prefHeight="23.0" prefWidth="171.0" />
+                  <TextField id="tfuser" fx:id="tfuser" layoutX="119.0" layoutY="162.0" prefHeight="23.0" prefWidth="171.0" />
+                  <PasswordField id="pfpassword" fx:id="pfpassword" layoutX="119.0" layoutY="204.0" prefHeight="23.0" prefWidth="171.0" />
+                  <TextField id="tfserver" fx:id="tfserver" layoutX="119.0" layoutY="247.0" prefHeight="23.0" prefWidth="171.0" />
+                  <TextField id="tfproxy" fx:id="tfproxy" layoutX="119.0" layoutY="290.0" prefHeight="23.0" prefWidth="171.0" />
+                  <TextField id="tfport" fx:id="tfport" layoutX="119.0" layoutY="331.0" prefHeight="23.0" prefWidth="171.0" />
+                  <TextField id="tfmmsc" fx:id="tfmmsc" layoutX="447.0" layoutY="10.0" prefHeight="23.0" prefWidth="181.0" />
+                  <TextField id="tfmmsproxy" fx:id="tfmmsproxy" layoutX="447.0" layoutY="45.0" prefHeight="23.0" prefWidth="181.0" />
+                  <TextField id="tfmmsport" fx:id="tfmmsport" layoutX="447.0" layoutY="83.0" prefHeight="23.0" prefWidth="181.0" />
+                  <TextField id="tftype" fx:id="tftype" layoutX="447.0" layoutY="124.0" prefHeight="23.0" prefWidth="181.0" />
+                  <TextField id="tfprotocol" fx:id="tfprotocol" layoutX="447.0" layoutY="162.0" prefHeight="23.0" prefWidth="181.0" />
+                  <TextField id="tfauthtype" fx:id="tfauthtype" layoutX="447.0" layoutY="202.0" prefHeight="23.0" prefWidth="181.0" />
+                  <TextField id="tfroamingprotocol" fx:id="tfroamingprotocol" layoutX="447.0" layoutY="245.0" prefHeight="23.0" prefWidth="181.0" />
+                  <ComboBox id="cbisUserDefined" fx:id="cbisUserDefined" layoutX="447.0" layoutY="290.0" prefHeight="23.0" prefWidth="181.0" />
+                  <ComboBox id="cbisUsed" fx:id="cbisUsed" layoutX="447.0" layoutY="331.0" prefHeight="23.0" prefWidth="181.0" />
+                  <Button id="btnGetAPNConfig" fx:id="btnGetAPNConfig" layoutX="119.0" layoutY="383.0" mnemonicParsing="false" onAction="#onGetAPNConfig" prefHeight="23.0" prefWidth="171.0" text="%btnGetAPNConfig" />
+                  <Button id="btnSetAPNConfig" fx:id="btnSetAPNConfig" layoutX="447.0" layoutY="383.0" mnemonicParsing="false" onAction="#onSetAPNConfig" prefHeight="23.0" prefWidth="181.0" text="%btnSetAPNConfig" />
+               </children>
+            </Pane>
+         </children>
+      </GridPane>
+      <TextArea id="taOperationInfo" fx:id="taOperationInfo" layoutY="416.0" prefHeight="209.0" prefWidth="950.0" />
+   </children>
+</Pane>
+

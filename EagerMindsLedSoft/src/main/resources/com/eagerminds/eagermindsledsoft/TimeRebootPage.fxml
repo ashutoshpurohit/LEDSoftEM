@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="200.0" prefWidth="650.0" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml" fx:controller="com.eagerminds.eagermindsledsoft.pages.TimeRebootPageController">
+    
+<HBox>
+        <VBox.margin>
+            <Insets left="90" top="50"/>
+        </VBox.margin>
+        <Label text="%repeat_time">
+            <HBox.margin>
+                <Insets top="3" right="10"/>
+            </HBox.margin>
+            <font>
+                <Font size="18"/>
+            </font>
+        </Label>
+
+        <TextField fx:id="tf_reboot_hour" prefWidth="40" text="00"/>
+        <Label text="h">
+            <HBox.margin>
+                <Insets top="2" right="5"/>
+            </HBox.margin>
+            <font>
+                <Font size="18"/>
+            </font>
+        </Label>
+
+        <TextField fx:id="tf_reboot_minute" prefWidth="40" text="00"/>
+        <Label text="m">
+            <HBox.margin>
+                <Insets top="1" right="5"/>
+            </HBox.margin>
+            <font>
+                <Font size="18"/>
+            </font>
+        </Label>
+
+        <TextField fx:id="tf_reboot_second" prefWidth="40" text="00"/>
+        <Label text="s">
+            <HBox.margin>
+                <Insets top="1" right="5"/>
+            </HBox.margin>
+            <font>
+                <Font size="18"/>
+            </font>
+        </Label>
+    </HBox>
+    <HBox>
+        <VBox.margin>
+            <Insets left="90" top="10"/>
+        </VBox.margin>
+        <Label text="%repeat_style">
+            <font>
+                <Font size="18"/>
+            </font>
+            <HBox.margin>
+                <Insets right="10"/>
+            </HBox.margin>
+        </Label>
+        <ComboBox prefWidth="140.0" fx:id="cb_reboot_repeat_type">
+            <!--<items>-->
+                <!--<FXCollections fx:factory="observableArrayList">-->
+                    <!--<String fx:value="%repeat_everyday"/>-->
+                    <!--<String fx:value="%repeat_everyday_by_week"/>-->
+                <!--</FXCollections>-->
+            <!--</items>-->
+        </ComboBox>
+    </HBox>
+    <HBox fx:id="hbox_brightness_selectday" spacing="5">
+        <VBox.margin>
+            <Insets left="20" top="10"/>
+        </VBox.margin>
+        <CheckBox text="%repeat_monday" fx:id="cb_monday"/>
+        <CheckBox text="%repeat_tuesday" fx:id="cb_tuesday"/>
+        <CheckBox text="%repeat_wednesday" fx:id="cb_wednesday"/>
+        <CheckBox text="%repeat_thursday" fx:id="cb_thursday"/>
+        <CheckBox text="%repeat_friday" fx:id="cb_friday"/>
+        <CheckBox text="%repeat_saturday" fx:id="cb_saturday"/>
+        <CheckBox text="%repeat_sunday" fx:id="cb_sunday"/>
+    </HBox>
+    <Button fx:id="btn_confirm" text="%repeat_confirm" onMouseClicked="#onConfirmRebootTime">
+        <padding>
+            <Insets left="20" top="10" right="20" bottom="10"/>
+        </padding>
+        <VBox.margin>
+            <Insets left="170" top="20"/>
+        </VBox.margin>
+    </Button>
+</VBox>

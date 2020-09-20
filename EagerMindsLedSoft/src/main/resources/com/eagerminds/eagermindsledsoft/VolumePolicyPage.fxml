@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox prefHeight="353.0" prefWidth="739.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eagerminds.eagermindsledsoft.pages.VolumePolicyPageController">
+    
+<HBox>
+        <VBox.margin>
+            <Insets left="15" top="15" />
+        </VBox.margin>
+        <Label text="%volume_input" />
+        <TextField fx:id="volume_value" prefWidth="40" text="00"/>
+        <Label text="\%">
+            <font>
+                <Font size="18"/>
+            </font>
+        </Label>
+    </HBox>
+
+    <HBox fx:id="hbox_volume_repeat">
+        <VBox.margin>
+            <Insets left="15" top="10" />
+        </VBox.margin>
+        <Label text="%set_volume_repeat_style">
+        </Label>
+        <ComboBox fx:id="cb_adjust_repeat_type" prefWidth="140.0">
+        </ComboBox>
+    </HBox>
+
+    <HBox fx:id="hbox_policy_time" alignment="CENTER_LEFT" spacing="5">
+        <VBox.margin>
+            <Insets left="15" top="10" />
+        </VBox.margin>
+        <Label text="%repeat_time">
+        </Label>
+
+        <TextField fx:id="tf_policy_hour" prefWidth="40" text="00" />
+        <Label text="h">
+        </Label>
+
+        <TextField fx:id="tf_policy_minute" prefWidth="40" text="00" />
+        <Label text="m">
+        </Label>
+
+        <TextField fx:id="tf_policy_second" prefWidth="40" text="00" />
+        <Label text="s">
+        </Label>
+    </HBox>
+
+    <HBox fx:id="hbox_volume_selectday" spacing="5">
+        <VBox.margin>
+            <Insets left="15" top="10" />
+        </VBox.margin>
+        <CheckBox fx:id="cb_monday" text="%repeat_monday" />
+        <CheckBox fx:id="cb_tuesday" text="%repeat_tuesday" />
+        <CheckBox fx:id="cb_wednesday" text="%repeat_wednesday" />
+        <CheckBox fx:id="cb_thursday" text="%repeat_thursday" />
+        <CheckBox fx:id="cb_friday" text="%repeat_friday" />
+        <CheckBox fx:id="cb_saturday" text="%repeat_saturday" />
+        <CheckBox fx:id="cb_sunday" text="%repeat_sunday" />
+    </HBox>
+
+    <HBox fx:id="hbox_volume_policy">
+        <VBox.margin>
+            <Insets left="15" top="15" />
+        </VBox.margin>
+        <Button onAction="#onActionAddVolumePolicy" prefHeight="30.0" prefWidth="150.0" text="%add_policy">
+        </Button>
+
+        <Button onAction="#onActionSetVolumePolicy" prefHeight="30.0" prefWidth="150.0" text="%set_volume_policy">
+            <HBox.margin>
+                <Insets left="15" />
+            </HBox.margin>
+        </Button>
+
+        <Button onAction="#onActionGetVolumePolicy" prefHeight="30.0" prefWidth="150.0" text="%get_volume_policy">
+            <HBox.margin>
+                <Insets left="15" />
+            </HBox.margin>
+        </Button>
+    </HBox>
+
+    <TextArea fx:id="ta_show" prefHeight="150.0" prefWidth="400.0">
+        <VBox.margin>
+            <Insets top="15" />
+        </VBox.margin>
+    </TextArea>
+
+</VBox>
+

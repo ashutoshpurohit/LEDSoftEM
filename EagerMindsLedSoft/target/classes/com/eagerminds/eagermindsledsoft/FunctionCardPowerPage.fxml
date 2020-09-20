@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+
+<VBox prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.eagerminds.eagermindsledsoft.pages.FunctionCardPowerPageController">
+   
+    <HBox>
+        <Button onAction="#onActionGetPowerState" prefHeight="30.0"
+            prefWidth="150.0" text="%get_functioncard_power_state">
+            <HBox.margin>
+                <Insets left="15" top="15" />
+            </HBox.margin>
+        </Button>
+        <Button onAction="#onActionGetManualPower" prefHeight="30.0"
+            prefWidth="150.0" text="%get_power_setting">
+            <HBox.margin>
+                <Insets left="15" top="15" />
+            </HBox.margin>
+        </Button>
+    </HBox>
+
+    <HBox alignment="BOTTOM_LEFT">
+        <VBox.margin>
+            <Insets left="15" top="15" />
+        </VBox.margin>
+        <Label text="%power_switch" />
+        <TextField fx:id="tf_power_switch" text="0" prefWidth="80" />
+        <Label text="(0:Open,1:Close)" />
+    </HBox>
+
+    <HBox alignment="BOTTOM_LEFT">
+        <VBox.margin>
+            <Insets left="15" top="5" />
+        </VBox.margin>
+        <Label text="Power type:" />
+        <TextField fx:id="tf_power_type" text="Screen power" prefWidth="80" />
+    </HBox>
+
+    <HBox alignment="BOTTOM_LEFT">
+        <VBox.margin>
+            <Insets left="15" top="5" />
+        </VBox.margin>
+        <Label text="Power subscript:" />
+        <TextField fx:id="tf_power_index" text="0" prefWidth="80" />
+        <Label text="(Currently supports 0~7)" />
+    </HBox>
+
+    <HBox>
+        <VBox.margin>
+            <Insets left="15" top="10" right="5" />
+        </VBox.margin>
+        <Button fx:id="btn_action_add_config" onAction="#onActionAddConfig" prefHeight="30.0"
+            prefWidth="150.0" text="%setting_brightness_policy_add"></Button>
+
+        <Button fx:id="btn_action_set_power" onAction="#onActionSetPower" prefHeight="30.0"
+            prefWidth="150.0" text="%set_power_setting">
+            <HBox.margin>
+                <Insets left="10" />
+            </HBox.margin>
+        </Button>
+    </HBox>
+
+    <TextArea fx:id="ta_show" prefHeight="150.0" prefWidth="200.0">
+        <VBox.margin>
+            <Insets top="15" />
+        </VBox.margin>
+    </TextArea> 
+</VBox>

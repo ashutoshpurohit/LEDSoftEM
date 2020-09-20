@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox id="AnchorPane" prefHeight="500" prefWidth="600.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.eagerminds.eagermindsledsoft.pages.network.EthernetNetworkPageController">
+    
+    <Button fx:id="btn_get_ethernet" onAction="#onActionGetEthernet" prefHeight="30.0"
+        prefWidth="150.0" text="%ethernet_get">
+        <VBox.margin>
+            <Insets left="15" top="15" />
+        </VBox.margin>
+    </Button>
+
+    <HBox alignment="BOTTOM_LEFT">
+        <VBox.margin>
+            <Insets left="15" top="15" />
+        </VBox.margin>
+        <Label text="%ethernet_dhcp" />
+        <ComboBox prefWidth="80.0" fx:id="cb_dhcp">
+        </ComboBox>
+    </HBox>
+
+    <HBox alignment="BOTTOM_LEFT">
+        <VBox.margin>
+            <Insets left="15" top="5" />
+        </VBox.margin>
+        <Label text="%ethernet_ip" />
+        <TextField fx:id="tf_ethernet_ip" text="" prefWidth="120" />
+    </HBox>
+
+    <HBox alignment="BOTTOM_LEFT">
+        <VBox.margin>
+            <Insets left="15" top="5" />
+        </VBox.margin>
+        <Label text="%ethernet_mask" />
+        <TextField fx:id="tf_ethernet_mask" text="" prefWidth="120" />
+    </HBox>
+    <HBox alignment="BOTTOM_LEFT">
+        <VBox.margin>
+            <Insets left="15" top="5" />
+        </VBox.margin>
+        <Label text="%ethernet_gateway" />
+        <TextField fx:id="tf_ethernet_gateway" text="" prefWidth="120" />
+    </HBox>
+    <HBox alignment="BOTTOM_LEFT">
+        <VBox.margin>
+            <Insets left="15" top="5" />
+        </VBox.margin>
+        <Label text="%ethernet_dns" />
+        <TextField fx:id="tf_ethernet_dns" text="" prefWidth="120" />
+    </HBox>
+
+    <Button fx:id="btn_set_ethernet" onAction="#onActionSetEthernet" prefHeight="30.0"
+        prefWidth="150.0" text="%ethernet_set">
+        <VBox.margin>
+            <Insets left="10" />
+        </VBox.margin>
+    </Button>
+
+    <TextArea fx:id="ta_show" prefHeight="150.0" prefWidth="200.0">
+        <VBox.margin>
+            <Insets top="15" />
+        </VBox.margin>
+    </TextArea>
+            
+</VBox>
+            

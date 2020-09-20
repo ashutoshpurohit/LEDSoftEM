@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+
+<VBox prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.eagerminds.eagermindsledsoft.pages.network.WifiNetworkPageController">
+    
+    <HBox>
+        <VBox.margin>
+            <Insets top="15" left="15"/>
+        </VBox.margin>
+
+        <Button fx:id="btn_wifi_get_open" onAction="#onActionWifiGet" prefHeight="30.0"
+            prefWidth="150.0" text="%wifi_get_open">
+            <VBox.margin>
+                <Insets left="15" top="15" />
+            </VBox.margin>
+        </Button>
+
+        <Button fx:id="btn_wifi_get_list" onAction="#onActionWifiGetList" prefHeight="30.0"
+            prefWidth="150.0" text="%wifi_get_list">
+            <VBox.margin>
+                <Insets left="15" top="15" />
+            </VBox.margin>
+        </Button>
+    </HBox>
+
+
+
+
+    <HBox>
+        <VBox.margin>
+            <Insets left="15" top="15" />
+        </VBox.margin>
+        <Label text="%wifi_set_status" />
+        <ComboBox prefWidth="80.0" fx:id="cb_wifi_set_status">
+        </ComboBox>
+
+        <Button fx:id="btn_wifi_set_open" onAction="#onActionWifiSet" prefHeight="30.0"
+            prefWidth="150.0" text="%wifi_set_open">
+            <VBox.margin>
+                <Insets left="15" top="15" />
+            </VBox.margin>
+        </Button>
+    </HBox>
+
+
+
+
+
+    <HBox alignment="BOTTOM_LEFT">
+        <VBox.margin>
+            <Insets left="15" top="25" />
+        </VBox.margin>
+        <Label text="WIFI SSID" />
+        <TextField fx:id="tf_wifi_ssid" text="" prefWidth="120" />
+    </HBox>
+    <HBox alignment="BOTTOM_LEFT">
+        <VBox.margin>
+            <Insets left="15" top="5" />
+        </VBox.margin>
+        <Label text="%terminal_pwd" />
+        <TextField fx:id="tf_wifi_password" text="" prefWidth="120" />
+    </HBox>
+    <Button fx:id="btn_wifi_connect" onAction="#onActionWifiConnect" prefHeight="30.0"
+        prefWidth="150.0" text="%wifi_connect">
+        <VBox.margin>
+            <Insets left="15" top="15" />
+        </VBox.margin>
+    </Button>
+
+    <TextArea fx:id="ta_show" prefHeight="150.0" prefWidth="200.0">
+        <VBox.margin>
+            <Insets top="15" />
+        </VBox.margin>
+    </TextArea>
+    
+</VBox>
